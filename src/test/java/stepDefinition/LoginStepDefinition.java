@@ -1,4 +1,6 @@
 package stepDefinition;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -43,6 +45,7 @@ public class LoginStepDefinition {
     }
 
 
+    @After("@closeLogin")
     public void closeDriver(){
         driver.quit();
     }

@@ -2,6 +2,7 @@ package stepDefinition;
 
 import Pages.LoginPage;
 import Pages.RegisterPage;
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -54,6 +55,7 @@ public class RegisterStepDefinition {
         String registerDoneText="Your registration completed";
         Assert.assertTrue(registerPage.registationDone(driver).getText().contains(registerDoneText));
     }
+    @After("@closeRegister")
     public void closeDriver(){
         driver.quit();
     }

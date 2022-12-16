@@ -1,3 +1,5 @@
+@regression
+@closeRegister
 Feature: user should be able to register to the E-commerce site
   Scenario: user could register with valid data
     Given user navigate to signup page

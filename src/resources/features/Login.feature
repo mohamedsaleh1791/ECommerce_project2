@@ -1,3 +1,5 @@
+@regression
+@closeLogin
 Feature: user should be able to login to the E-commerce site
   Scenario: user could login with valid data
     Given user navigate to login page

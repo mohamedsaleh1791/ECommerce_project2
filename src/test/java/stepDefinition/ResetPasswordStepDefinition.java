@@ -2,6 +2,7 @@ package stepDefinition;
 
 import Pages.LoginPage;
 import Pages.ResetPasswordPage;
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -44,7 +45,8 @@ public class ResetPasswordStepDefinition {
 
 
     }
-    public void closeDriver(){
-        driver.quit();
+    @After("@closeRestPassword")
+    public void testStart() throws Throwable {
     }
+
 }
