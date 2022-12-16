@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 
 public class RegisterStepDefinition {
@@ -35,11 +36,17 @@ public class RegisterStepDefinition {
 
     @When("user enter valid data")
     public void user_enter_valid_data() throws InterruptedException {
-
+        Select selectDay=new Select(registerPage.dayIP(driver));
+        Select selectMonth=new Select(registerPage.monthIP(driver));
+        Select selectYear=new Select(registerPage.yearIP(driver));
         registerPage.genderIP(driver).click();
         registerPage.firstNameIP(driver).sendKeys("test");
         registerPage.lastNameIP(driver).sendKeys("test");
-        registerPage.emailIP(driver).sendKeys("test14@test.com");
+        selectDay.selectByValue("1");
+        selectMonth.selectByValue("2");
+        selectYear.selectByValue("1991");
+        Thread.sleep(300);
+        registerPage.emailIP(driver).sendKeys("test15@test.com");
         registerPage.passwordIP(driver).sendKeys("123456");
         registerPage.confirmPasswordIP(driver).sendKeys("123456");
 
