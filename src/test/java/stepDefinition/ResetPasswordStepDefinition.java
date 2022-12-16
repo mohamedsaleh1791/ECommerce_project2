@@ -46,7 +46,8 @@ public class ResetPasswordStepDefinition {
 
     }
     @After("@closeRestPassword")
-    public void testStart() throws Throwable {
+    public void closeDriver(){
+        driver.quit();
     }
 
 }
