@@ -28,8 +28,8 @@ public class LoginStepDefinition {
     public void user_enter_valid_username_and_valid_password() throws InterruptedException {
         loginPage=new LoginPage();
         loginPage.signinBTN(driver).click();
-        loginPage.emailField(driver).sendKeys("test@test.com");
-        loginPage.passwordField(driver).sendKeys("12345");
+        loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
+        loginPage.passwordField(driver).sendKeys("123456");
 
     }
     @And("user click login button")

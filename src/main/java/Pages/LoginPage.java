@@ -32,4 +32,9 @@ public class LoginPage {
         WebElement logoutElement= driver.findElement(logoutLOC);
         return logoutElement;
     }
+    public WebElement forgetBTN(WebDriver driver){
+        By forgetLOC= By.className("forgot-password");
+        WebElement forgetElement= driver.findElement(forgetLOC);
+        return forgetElement;
+    }
 }
