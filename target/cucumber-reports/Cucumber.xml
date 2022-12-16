@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="77.193">
-<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="20.271">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="106.796">
+<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="23.371">
 <system-out><![CDATA[Given user navigate to login page...........................................passed
 When user enter valid username and valid password...........................passed
 And user click login button.................................................passed
 Then user can login successfully and go homepage............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="22.429">
+<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="27.676">
 <system-out><![CDATA[Given user navigate to signup page..........................................passed
 When user enter valid data..................................................passed
 And user click create account button........................................passed
 Then user can create account successfully and go to homepage................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="15.797">
+<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="19.676">
 <system-out><![CDATA[Given user navigate to home page............................................passed
 When user click forget password button......................................passed
 And user enter valid Email and user click recover Button....................passed
 Then user recieve Instruction mail to rest password.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="logged user can search for products" time="17.608">
+<testcase classname="Logged User could search for any product" name="logged user can search for products" time="18.493">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product................................................passed
 And click search button.....................................................passed
 Then redirect to search page................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="16.724">
+<system-out><![CDATA[Given user login with valid username and password...........................passed
+When user switch between currencies.........................................passed
+Then currency of product changed............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

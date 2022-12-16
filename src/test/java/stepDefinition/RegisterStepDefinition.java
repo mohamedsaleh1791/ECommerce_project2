@@ -39,7 +39,7 @@ public class RegisterStepDefinition {
         registerPage.genderIP(driver).click();
         registerPage.firstNameIP(driver).sendKeys("test");
         registerPage.lastNameIP(driver).sendKeys("test");
-        registerPage.emailIP(driver).sendKeys("test13@test.com");
+        registerPage.emailIP(driver).sendKeys("test14@test.com");
         registerPage.passwordIP(driver).sendKeys("123456");
         registerPage.confirmPasswordIP(driver).sendKeys("123456");
 
