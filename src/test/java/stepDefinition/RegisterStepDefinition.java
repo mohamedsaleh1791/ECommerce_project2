@@ -46,7 +46,7 @@ public class RegisterStepDefinition {
         selectMonth.selectByValue("2");
         selectYear.selectByValue("1991");
         Thread.sleep(300);
-        registerPage.emailIP(driver).sendKeys("test15@test.com");
+        registerPage.emailIP(driver).sendKeys("test16@test.com");
         registerPage.passwordIP(driver).sendKeys("123456");
         registerPage.confirmPasswordIP(driver).sendKeys("123456");
 
