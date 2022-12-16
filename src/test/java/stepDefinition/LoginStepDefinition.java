@@ -37,7 +37,7 @@ public class LoginStepDefinition {
     @And("user click login button")
     public void user_click_login_button() throws InterruptedException {
         loginPage.loginBTN(driver).click();
-        Thread.sleep(20000);//using long time due to low performance of website
+        Thread.sleep(300);//using long time due to low performance of website
     }
     @Then("user can login successfully and go homepage")
     public void user_can_login_successfully_and_go_homepage(){
