@@ -20,7 +20,8 @@ public class SwitchCurrenciesStepDefinition {
     @Given("user login with valid username and password")
     public void user_login_with_valid_username_and_password() throws InterruptedException {
         driver=new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "D:\\TestingAutomation\\Testing\\src\\resources\\chromedriver.exe");
+        String chromePath=System.getProperty("user.dir")+"/src/resources/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromePath);
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com");
         Thread.sleep(300);

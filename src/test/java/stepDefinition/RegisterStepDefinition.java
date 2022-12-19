@@ -22,7 +22,8 @@ public class RegisterStepDefinition {
     @Given("user navigate to signup page")
     public void user_navigate_to_signup_page() throws InterruptedException {
         driver=new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "D:\\TestingAutomation\\Testing\\src\\resources\\chromedriver.exe");
+        String chromePath=System.getProperty("user.dir")+"/src/resources/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromePath);
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com/");
         Thread.sleep(300);
