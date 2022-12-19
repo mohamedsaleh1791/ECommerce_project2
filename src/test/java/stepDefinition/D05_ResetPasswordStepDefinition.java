@@ -1,7 +1,7 @@
 package stepDefinition;
 
-import Pages.LoginPage;
-import Pages.ResetPasswordPage;
+import Pages.P02_Login;
+import Pages.P03_ResetPassword;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,15 +11,15 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ResetPasswordStepDefinition {
+public class D05_ResetPasswordStepDefinition {
     WebDriver driver = null;
-    LoginPage loginPage;
-    ResetPasswordPage resetPasswordPage;
+    P02_Login loginPage;
+    P03_ResetPassword resetPasswordPage;
 
     @Given("user navigate to home page")
     public void user_navigate_to_home_page() throws InterruptedException {
         driver=new ChromeDriver();
-        loginPage=new LoginPage();
+        loginPage=new P02_Login();
         String chromePath=System.getProperty("user.dir")+"/src/resources/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromePath);
         driver.manage().window().maximize();
@@ -33,7 +33,7 @@ public class ResetPasswordStepDefinition {
     }
     @And("user enter valid Email and user click recover Button")
     public void user_enter_valid_Email_and_user_click_recover_Button(){
-        resetPasswordPage = new ResetPasswordPage();
+        resetPasswordPage = new P03_ResetPassword();
         resetPasswordPage.recoveEmailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
         resetPasswordPage.recoveEmailBTN(driver).click();
 

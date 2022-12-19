@@ -1,6 +1,5 @@
 package stepDefinition;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,18 +7,18 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import Pages.LoginPage;
+import Pages.P02_Login;
 
 
 
 
-public class LoginStepDefinition {
+public class D02_LoginStepDefinition {
 
     WebDriver driver = null;
-    LoginPage loginPage;
+    P02_Login loginPage;
     @When("user enter valid {string} and valid {string}")
     public void userEnterValidAndValid(String arg0, String arg1) {
-        loginPage=new LoginPage();
+        loginPage=new P02_Login();
         loginPage.signinBTN(driver).click();
         loginPage.emailField(driver).sendKeys(arg0);
         loginPage.passwordField(driver).sendKeys(arg1);

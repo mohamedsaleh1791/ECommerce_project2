@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SearchProductPage {
+public class P05_SearchProduct {
     public WebElement searchProductField(WebDriver driver){
         By serachProductLoc= By.id("small-searchterms");
         WebElement searchProductElement= driver.findElement(serachProductLoc);

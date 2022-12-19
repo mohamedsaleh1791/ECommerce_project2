@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ResetPasswordPage {
+public class P03_ResetPassword {
     public WebElement recoveEmailField(WebDriver driver){
         By recoveEmailLoc= By.id("Email");
         WebElement recoverEmailElement= driver.findElement(recoveEmailLoc);

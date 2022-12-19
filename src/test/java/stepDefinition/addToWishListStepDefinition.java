@@ -1,7 +1,7 @@
 package stepDefinition;
 
-import Pages.LoginPage;
-import Pages.WishListProductsPage;
+import Pages.P02_Login;
+import Pages.P04_WishList;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,8 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class addToWishListStepDefinition {
     WebDriver driver = null;
-    LoginPage loginPage;
-    WishListProductsPage wishListProductsPage;
+    P02_Login loginPage;
+    P04_WishList wishListProductsPage;
     @Given("user login with valid username and valid password")
     public void user_login_with_valid_username_and_valid_password() throws InterruptedException {
         driver=new ChromeDriver();
@@ -22,7 +22,7 @@ public class addToWishListStepDefinition {
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com");
         Thread.sleep(300);
-        loginPage=new LoginPage();
+        loginPage=new P02_Login();
         loginPage.signinBTN(driver).click();
         loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
         loginPage.passwordField(driver).sendKeys("123456");
@@ -31,7 +31,7 @@ public class addToWishListStepDefinition {
     }
     @When("press on wishList Button on any product from Home Page")
             public void press_on_wishList_Button_on_any_product_from_Home_Page(){
-                wishListProductsPage=new WishListProductsPage();
+                wishListProductsPage=new P04_WishList();
                 wishListProductsPage.addToWishListFiled(driver).click();
             }
     @Then("product added to whishList")

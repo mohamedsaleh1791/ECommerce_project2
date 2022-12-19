@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class RegisterPage {
+public class P01_Register {
     public WebElement registerBTN(WebDriver driver){
         By registerLOC= By.className("register-button");
         WebElement registerElement= driver.findElement(registerLOC);

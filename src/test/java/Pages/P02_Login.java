@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class LoginPage {
+public class P02_Login {
 
     public WebElement signinBTN(WebDriver driver){
         By signInLoc= By.className("ico-login");

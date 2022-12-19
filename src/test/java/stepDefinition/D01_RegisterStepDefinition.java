@@ -1,7 +1,7 @@
 package stepDefinition;
 
-import Pages.LoginPage;
-import Pages.RegisterPage;
+import Pages.P02_Login;
+import Pages.P01_Register;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,10 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
-public class RegisterStepDefinition {
+public class D01_RegisterStepDefinition {
     WebDriver driver = null;
-    LoginPage loginPage=null;
-    RegisterPage registerPage=null;
+    P02_Login loginPage=null;
+    P01_Register p01Register =null;
 
 
     @Given("user navigate to signup page")
@@ -27,41 +27,41 @@ public class RegisterStepDefinition {
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com/");
         Thread.sleep(300);
-        loginPage=new LoginPage();
-        registerPage=new RegisterPage();
+        loginPage=new P02_Login();
+        p01Register =new P01_Register();
         loginPage.signinBTN(driver).click();
         Thread.sleep(500);
-        registerPage.registerBTN(driver).click();
+        p01Register.registerBTN(driver).click();
         Thread.sleep(500);
     }
 
     @When("user enter valid data")
     public void user_enter_valid_data() throws InterruptedException {
-        Select selectDay=new Select(registerPage.dayIP(driver));
-        Select selectMonth=new Select(registerPage.monthIP(driver));
-        Select selectYear=new Select(registerPage.yearIP(driver));
-        registerPage.genderIP(driver).click();
-        registerPage.firstNameIP(driver).sendKeys("test");
-        registerPage.lastNameIP(driver).sendKeys("test");
+        Select selectDay=new Select(p01Register.dayIP(driver));
+        Select selectMonth=new Select(p01Register.monthIP(driver));
+        Select selectYear=new Select(p01Register.yearIP(driver));
+        p01Register.genderIP(driver).click();
+        p01Register.firstNameIP(driver).sendKeys("test");
+        p01Register.lastNameIP(driver).sendKeys("test");
         selectDay.selectByValue("1");
         selectMonth.selectByValue("2");
         selectYear.selectByValue("1991");
         Thread.sleep(300);
-        registerPage.emailIP(driver).sendKeys("test16@test.com");
-        registerPage.passwordIP(driver).sendKeys("123456");
-        registerPage.confirmPasswordIP(driver).sendKeys("123456");
+        p01Register.emailIP(driver).sendKeys("test20@test.com");
+        p01Register.passwordIP(driver).sendKeys("123456");
+        p01Register.confirmPasswordIP(driver).sendKeys("123456");
 
     }
     @And("user click create account button")
     public void user_click_create_account_button() throws InterruptedException {
-        registerPage.createAccount(driver).click();
+        p01Register.createAccount(driver).click();
         Thread.sleep(500);//using long time due to low performance of website
     }
 
     @Then("user can create account successfully and go to homepage")
     public void user_can_create_account_successfully_and_go_to_homepage(){
         String registerDoneText="Your registration completed";
-        Assert.assertTrue(registerPage.registationDone(driver).getText().contains(registerDoneText));
+        Assert.assertTrue(p01Register.registationDone(driver).getText().contains(registerDoneText));
     }
     @After("@closeRegister")
     public void closeDriver(){

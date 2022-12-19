@@ -1,8 +1,7 @@
 package stepDefinition;
 
-import Pages.LoginPage;
-import Pages.SearchProductPage;
-import Pages.SwitchCurrciesPage;
+import Pages.P02_Login;
+import Pages.P06_Currencies;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,10 +11,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class SwitchCurrenciesStepDefinition {
+public class D03_CurrenciesStepDefinition {
     WebDriver driver = null;
-    LoginPage loginPage;
-    SwitchCurrciesPage switchCurrciesPage;
+    P02_Login loginPage;
+    P06_Currencies switchCurrciesPage;
 
     @Given("user login with valid username and password")
     public void user_login_with_valid_username_and_password() throws InterruptedException {
@@ -25,7 +24,7 @@ public class SwitchCurrenciesStepDefinition {
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com");
         Thread.sleep(300);
-        loginPage=new LoginPage();
+        loginPage=new P02_Login();
         loginPage.signinBTN(driver).click();
         loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
         loginPage.passwordField(driver).sendKeys("123456");
@@ -34,7 +33,7 @@ public class SwitchCurrenciesStepDefinition {
     }
     @When("user switch between currencies")
     public void user_switch_between_currencies(){
-        switchCurrciesPage=new SwitchCurrciesPage();
+        switchCurrciesPage=new P06_Currencies();
         Select selector=new Select(switchCurrciesPage.currencySelector(driver));
         selector.selectByIndex(1);
     }

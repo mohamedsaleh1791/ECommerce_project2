@@ -1,7 +1,7 @@
 package stepDefinition;
 
-import Pages.LoginPage;
-import Pages.SearchProductPage;
+import Pages.P02_Login;
+import Pages.P05_SearchProduct;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,10 +11,10 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SearchProductStepDefinition {
+public class D04_SearchProductStepDefinition {
     WebDriver driver = null;
-    LoginPage loginPage;
-    SearchProductPage searchProductPage;
+    P02_Login loginPage;
+    P05_SearchProduct searchProductPage;
 
     @Given("user navigate to login page and enter valid username and password")
     public void user_navigate_to_login_page_and_enter_valid_username_and_password() throws InterruptedException {
@@ -24,7 +24,7 @@ public class SearchProductStepDefinition {
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com");
         Thread.sleep(300);
-        loginPage=new LoginPage();
+        loginPage=new P02_Login();
         loginPage.signinBTN(driver).click();
         loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
         loginPage.passwordField(driver).sendKeys("123456");
@@ -34,7 +34,7 @@ public class SearchProductStepDefinition {
     }
     @When("user search for product by {string}")
     public void userSearchForProductBy(String arg0) {
-        searchProductPage=new SearchProductPage();
+        searchProductPage=new P05_SearchProduct();
         searchProductPage.searchProductField(driver).sendKeys(arg0);
     }
     @Then("redirect to search page that contain {string}")
