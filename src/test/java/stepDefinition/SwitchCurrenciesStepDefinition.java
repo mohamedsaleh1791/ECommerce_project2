@@ -40,7 +40,11 @@ public class SwitchCurrenciesStepDefinition {
     @Then("currency of product changed")
     public void currency_of_product_changed() throws InterruptedException {
         Thread.sleep(300);
-        Assert.assertTrue(switchCurrciesPage.currencyChanged(driver).getText().contains("€"));
+        for (int i=0;i<switchCurrciesPage.currencyChanged(driver).size();i++){
+            System.out.println(switchCurrciesPage.currencyChanged(driver).get(i).getText());
+            Assert.assertTrue(switchCurrciesPage.currencyChanged(driver).get(i).getText().contains("€"));
+        }
+
 
     }
     @After("@closeswitchCurrency")
