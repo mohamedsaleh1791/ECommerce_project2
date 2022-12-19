@@ -17,6 +17,13 @@ public class LoginStepDefinition {
 
     WebDriver driver = null;
     LoginPage loginPage;
+    @When("user enter valid {string} and valid {string}")
+    public void userEnterValidAndValid(String arg0, String arg1) {
+        loginPage=new LoginPage();
+        loginPage.signinBTN(driver).click();
+        loginPage.emailField(driver).sendKeys(arg0);
+        loginPage.passwordField(driver).sendKeys(arg1);
+    }
 
     @Given("user navigate to login page")
     public void user_navigate_to_login_page() throws InterruptedException {
@@ -27,14 +34,7 @@ public class LoginStepDefinition {
         driver.get("https://demo.nopcommerce.com");
         Thread.sleep(300);
     }
-    @When("user enter valid username and valid password")
-    public void user_enter_valid_username_and_valid_password() throws InterruptedException {
-        loginPage=new LoginPage();
-        loginPage.signinBTN(driver).click();
-        loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
-        loginPage.passwordField(driver).sendKeys("123456");
 
-    }
     @And("user click login button")
     public void user_click_login_button() throws InterruptedException {
         loginPage.loginBTN(driver).click();
@@ -50,4 +50,8 @@ public class LoginStepDefinition {
     public void closeDriver(){
         driver.quit();
     }
+
+
+
+
 }
