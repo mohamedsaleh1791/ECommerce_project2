@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="152.62">
+<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="39.301">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c6f39136cf62076a7bc7e31587f48a1f, findElement {using=class name, value=result}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55130}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55130/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c6f39136cf62076a7bc7e31587f48a1f" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user navigate to signup page..........................................passed
+When user enter valid data..................................................passed
+And user click create account button........................................passed
+Then user can create account successfully and go to homepage................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6f39136cf62076a7bc7e31587f48a1f, findElement {using=class name, value=result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55130}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55130/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c6f39136cf62076a7bc7e31587f48a1f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.example.Pages.P01_Register.registationDone(P01_Register.java:69)
+	at org.example.stepDefinition.D01_RegisterStepDefinition.user_can_create_account_successfully_and_go_to_homepage(D01_RegisterStepDefinition.java:55)
+	at ✽.user can create account successfully and go to homepage(file:///E:/demo/ECommerce_project2/src/resources/features/F01_Register.feature:8)
+]]></failure>
+</testcase>
+<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="15.18">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When user enter valid "victoria_victoria@nopCommerce.com" and valid "123456".passed
+And user click login button.................................................passed
+Then user can login successfully and go homepage............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="12.147">
+<system-out><![CDATA[Given user login with valid username and password...........................passed
+When user switch between currencies.........................................passed
+Then currency of product changed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user can search for products" time="12.69">
+<system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
+When user search for product by "macbook"...................................passed
+And click search button.....................................................passed
+Then redirect to search page that contain "macbook".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user can search for products 2" time="26.38">
+<system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
+When user search for product by "laptop"....................................passed
+And click search button.....................................................passed
+Then redirect to search page that contain "laptop"..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged User could search for any product" name="user can search for products 3" time="13.433">
+<system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
+When user search for product by "nike"......................................passed
+And click search button.....................................................passed
+Then redirect to search page that contain "nike"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="11.817">
+<system-out><![CDATA[Given user navigate to home page............................................passed
+When user click forget password button......................................passed
+And user enter valid Email and user click recover Button....................passed
+Then user recieve Instruction mail to rest password.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could add different products to Wishlist" name="logged user can add products to  whishList" time="20.884">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.content&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1149501c1608f5634a4f4e7aeb804a3f, findElement {using=class name, value=content}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1149501c1608f5634a4f4e7aeb804a3f" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user login with valid username and valid password.....................passed
+When press on wishList Button on any product from Home Page.................passed
+Then product added to whishList.............................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".content"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1149501c1608f5634a4f4e7aeb804a3f, findElement {using=class name, value=content}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55331/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1149501c1608f5634a4f4e7aeb804a3f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.example.Pages.P04_WishList.checkToWishListFiled(P04_WishList.java:13)
+	at org.example.stepDefinition.addToWishListStepDefinition.product_added_to_whishList(addToWishListStepDefinition.java:39)
+	at ✽.product added to whishList(file:///E:/demo/ECommerce_project2/src/resources/features/F08-Wishlist.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
