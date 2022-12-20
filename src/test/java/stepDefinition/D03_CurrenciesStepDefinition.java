@@ -12,44 +12,36 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class D03_CurrenciesStepDefinition {
-    WebDriver driver = null;
+
     P02_Login loginPage;
     P06_Currencies switchCurrciesPage;
 
     @Given("user login with valid username and password")
     public void user_login_with_valid_username_and_password() throws InterruptedException {
-        driver=new ChromeDriver();
-        String chromePath=System.getProperty("user.dir")+"/src/resources/chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", chromePath);
-        driver.manage().window().maximize();
-        driver.get("https://demo.nopcommerce.com");
-        Thread.sleep(300);
+
         loginPage=new P02_Login();
-        loginPage.signinBTN(driver).click();
-        loginPage.emailField(driver).sendKeys("victoria_victoria@nopCommerce.com");
-        loginPage.passwordField(driver).sendKeys("123456");
-        loginPage.loginBTN(driver).click();
+        loginPage.signinBTN(Hooks.driver).click();
+        loginPage.emailField(Hooks.driver).sendKeys("victoria_victoria@nopCommerce.com");
+        loginPage.passwordField(Hooks.driver).sendKeys("123456");
+        loginPage.loginBTN(Hooks.driver).click();
         Thread.sleep(300);//using long time due to low performance of website
     }
     @When("user switch between currencies")
     public void user_switch_between_currencies(){
         switchCurrciesPage=new P06_Currencies();
-        Select selector=new Select(switchCurrciesPage.currencySelector(driver));
+        Select selector=new Select(switchCurrciesPage.currencySelector(Hooks.driver));
         selector.selectByIndex(1);
     }
     @Then("currency of product changed")
     public void currency_of_product_changed() throws InterruptedException {
         Thread.sleep(300);
-        for (int i=0;i<switchCurrciesPage.currencyChanged(driver).size();i++){
-            System.out.println(switchCurrciesPage.currencyChanged(driver).get(i).getText());
-            Assert.assertTrue(switchCurrciesPage.currencyChanged(driver).get(i).getText().contains("€"));
+        for (int i=0;i<switchCurrciesPage.currencyChanged(Hooks.driver).size();i++){
+            System.out.println(switchCurrciesPage.currencyChanged(Hooks.driver).get(i).getText());
+            Assert.assertTrue(switchCurrciesPage.currencyChanged(Hooks.driver).get(i).getText().contains("€"));
         }
 
 
     }
-    @After("@closeswitchCurrency")
-    public void closeDriver(){
-        driver.quit();
-    }
+
 
 }

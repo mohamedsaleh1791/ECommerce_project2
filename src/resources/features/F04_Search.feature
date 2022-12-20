@@ -8,6 +8,6 @@ Feature: Logged User could search for any product
     Then redirect to search page that contain "<product name>"
     Examples:
       |product name|
-      |book|
+      |macbook|
       |laptop|
       |nike|

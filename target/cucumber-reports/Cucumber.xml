@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="83.298">
-<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="15.648">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="96.035">
+<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="15.024">
 <system-out><![CDATA[Given user navigate to signup page..........................................passed
 When user enter valid data..................................................passed
 And user click create account button........................................passed
 Then user can create account successfully and go to homepage................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="8.851">
+<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="9.021">
 <system-out><![CDATA[Given user navigate to login page...........................................passed
 When user enter valid "victoria_victoria@nopCommerce.com" and valid "123456".passed
 And user click login button.................................................passed
 Then user can login successfully and go homepage............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="10.564">
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="11.401">
 <system-out><![CDATA[Given user login with valid username and password...........................passed
 When user switch between currencies.........................................passed
 Then currency of product changed............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products" time="11.123">
+<testcase classname="Logged User could search for any product" name="user can search for products" time="11.627">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
-When user search for product by "book"......................................passed
+When user search for product by "macbook"...................................passed
 And click search button.....................................................passed
-Then redirect to search page that contain "book"............................passed
+Then redirect to search page that contain "macbook".........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products 2" time="10.611">
+<testcase classname="Logged User could search for any product" name="user can search for products 2" time="13.672">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product by "laptop"....................................passed
 And click search button.....................................................passed
 Then redirect to search page that contain "laptop"..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products 3" time="10.726">
+<testcase classname="Logged User could search for any product" name="user can search for products 3" time="12.156">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product by "nike"......................................passed
 And click search button.....................................................passed
 Then redirect to search page that contain "nike"............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="7.157">
+<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="8.737">
 <system-out><![CDATA[Given user navigate to home page............................................passed
 When user click forget password button......................................passed
 And user enter valid Email and user click recover Button....................passed
 Then user recieve Instruction mail to rest password.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could add different products to Wishlist" name="logged user can add products to  whishList" time="8.267">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.content&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [75bbf19e6f15b64217e74409e8bb7d65, findElement {using=class name, value=content}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62562/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 75bbf19e6f15b64217e74409e8bb7d65" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user login with valid username and valid password.....................passed
+<testcase classname="Logged user could add different products to Wishlist" name="logged user can add products to  whishList" time="13.997">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.content&quot;}&#10;  (Session info: chrome=108.0.5359.125)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [f7358c4aad5ea770c918f9ad3633836d, findElement {using=class name, value=content}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51866/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f7358c4aad5ea770c918f9ad3633836d" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user login with valid username and valid password.....................passed
 When press on wishList Button on any product from Home Page.................passed
 Then product added to whishList.............................................failed
 
@@ -60,9 +60,9 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_112'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75bbf19e6f15b64217e74409e8bb7d65, findElement {using=class name, value=content}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:62562}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62562/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 75bbf19e6f15b64217e74409e8bb7d65
+Command: [f7358c4aad5ea770c918f9ad3633836d, findElement {using=class name, value=content}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\MOHAME~1.KOT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:51866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51866/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f7358c4aad5ea770c918f9ad3633836d
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
