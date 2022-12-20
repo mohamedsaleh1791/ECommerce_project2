@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class D05_ResetPasswordStepDefinition {
+public class D03_ResetPasswordStepDefinition {
 
     P02_Login loginPage;
     P03_ResetPassword resetPasswordPage;

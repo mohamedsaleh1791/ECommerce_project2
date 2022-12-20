@@ -1,17 +1,17 @@
 package org.example.stepDefinition;
 
 import org.example.Pages.P02_Login;
-import org.example.Pages.P06_Currencies;
+import org.example.Pages.P05_Currencies;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 
-public class D03_CurrenciesStepDefinition {
+public class D05_CurrenciesStepDefinition {
 
     P02_Login loginPage;
-    P06_Currencies switchCurrciesPage;
+    P05_Currencies switchCurrciesPage;
 
     @Given("user login with valid username and password")
     public void user_login_with_valid_username_and_password() throws InterruptedException {
@@ -25,7 +25,7 @@ public class D03_CurrenciesStepDefinition {
     }
     @When("user switch between currencies")
     public void user_switch_between_currencies(){
-        switchCurrciesPage=new P06_Currencies();
+        switchCurrciesPage=new P05_Currencies();
         Select selector=new Select(switchCurrciesPage.currencySelector(Hooks.driver));
         selector.selectByIndex(1);
     }

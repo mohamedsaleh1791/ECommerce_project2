@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class P06_Currencies {
+public class P05_Currencies {
     public WebElement currencySelector(WebDriver driver){
         WebElement currencyElement= driver.findElement(By.id("customerCurrency"));
         return currencyElement;

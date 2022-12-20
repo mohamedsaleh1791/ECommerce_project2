@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class P07_Hover {
+public class P06_Hover {
    public List<WebElement> categories(WebDriver driver){
        List<WebElement> categoriesLoc=driver.findElements(By.xpath("//ul[@class=\"top-menu notmobile\"]/li[position() >= 1 and not(position() > 3)]"));
        return categoriesLoc;

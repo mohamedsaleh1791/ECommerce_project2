@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class P05_SearchProduct {
+public class P04_SearchProduct {
     public WebElement searchProductField(WebDriver driver){
         By serachProductLoc= By.id("small-searchterms");
         WebElement searchProductElement= driver.findElement(serachProductLoc);

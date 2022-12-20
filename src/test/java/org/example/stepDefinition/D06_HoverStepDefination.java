@@ -1,17 +1,16 @@
 package org.example.stepDefinition;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.Pages.P07_Hover;
+import org.example.Pages.P06_Hover;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.Random;
 
-public class D07_HoverStepDefination {
-    P07_Hover hoverPage=new P07_Hover();
+public class D06_HoverStepDefination {
+    P06_Hover hoverPage=new P06_Hover();
     int categoryNumber=new Random().nextInt(3);
     String actualResult;
     @Given("user open home page")

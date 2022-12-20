@@ -1,7 +1,7 @@
 package org.example.stepDefinition;
 
 import org.example.Pages.P02_Login;
-import org.example.Pages.P05_SearchProduct;
+import org.example.Pages.P04_SearchProduct;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +11,7 @@ import org.junit.Assert;
 public class D04_SearchProductStepDefinition {
 
     P02_Login loginPage;
-    P05_SearchProduct searchProductPage;
+    P04_SearchProduct searchProductPage;
 
     @Given("user navigate to login page and enter valid username and password")
     public void user_navigate_to_login_page_and_enter_valid_username_and_password() throws InterruptedException {
@@ -26,7 +26,7 @@ public class D04_SearchProductStepDefinition {
     }
     @When("user search for product by {string}")
     public void userSearchForProductBy(String arg0) {
-        searchProductPage=new P05_SearchProduct();
+        searchProductPage=new P04_SearchProduct();
         searchProductPage.searchProductField(Hooks.driver).sendKeys(arg0);
     }
     @Then("redirect to search page that contain {string}")
