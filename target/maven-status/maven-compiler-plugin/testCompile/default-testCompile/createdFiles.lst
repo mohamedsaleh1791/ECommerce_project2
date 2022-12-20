@@ -1,0 +1,16 @@
+org\example\stepDefinition\D02_LoginStepDefinition.class
+org\example\stepDefinition\D03_CurrenciesStepDefinition.class
+org\example\stepDefinition\D04_SearchProductStepDefinition.class
+org\example\stepDefinition\Hooks.class
+org\example\stepDefinition\D01_RegisterStepDefinition.class
+org\example\stepDefinition\D05_ResetPasswordStepDefinition.class
+org\example\Pages\P07_Hover.class
+org\example\runners\testRunner.class
+org\example\Pages\P03_ResetPassword.class
+org\example\Pages\P05_SearchProduct.class
+org\example\Pages\P06_Currencies.class
+org\example\stepDefinition\D06_addToWishListStepDefinition.class
+org\example\Pages\P01_Register.class
+org\example\Pages\P02_Login.class
+org\example\Pages\P04_WishList.class
+org\example\stepDefinition\D07_HoverStepDefination.class
