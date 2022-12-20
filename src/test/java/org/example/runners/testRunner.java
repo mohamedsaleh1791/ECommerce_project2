@@ -9,13 +9,13 @@ import org.junit.runner.RunWith;
         features = "src\\resources\\features",
         glue = {"org.example.stepDefinition"},
         tags = "@regression",
-        plugin = { "pretty", "json:target/Cucumber.json",
-                "junit:target/Cucumber.xml",
+        plugin = { "pretty", "json:target/cucumber.json",
+                "junit:target/cucumber.xml",
                 "html:target/cucumber.html" ,
                 "rerun:target/rerun.txt"},
         monochrome = true
 )
 
-public class TestRunner {
+public class testRunner {
 
 }

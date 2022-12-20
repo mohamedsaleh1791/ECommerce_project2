@@ -1,2 +1,0 @@
-file:src/resources/features/F01_Register.feature:4
-file:src/resources/features/F08-Wishlist.feature:4

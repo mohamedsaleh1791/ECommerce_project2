@@ -38,7 +38,7 @@ public class D01_RegisterStepDefinition {
         selectMonth.selectByValue("2");
         selectYear.selectByValue("1991");
         Thread.sleep(300);
-        p01Register.emailIP(Hooks.driver).sendKeys("test22@test.com");
+        p01Register.emailIP(Hooks.driver).sendKeys("test23@test.com");
         p01Register.passwordIP(Hooks.driver).sendKeys("123456");
         p01Register.confirmPasswordIP(Hooks.driver).sendKeys("123456");
 
