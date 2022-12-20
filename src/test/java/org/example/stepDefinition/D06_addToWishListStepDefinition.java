@@ -14,12 +14,7 @@ public class D06_addToWishListStepDefinition {
     @Given("user login with valid username and valid password")
     public void user_login_with_valid_username_and_valid_password() throws InterruptedException {
 
-        loginPage=new P02_Login();
-        loginPage.signinBTN(Hooks.driver).click();
-        loginPage.emailField(Hooks.driver).sendKeys("victoria_victoria@nopCommerce.com");
-        loginPage.passwordField(Hooks.driver).sendKeys("123456");
-        loginPage.loginBTN(Hooks.driver).click();
-        Thread.sleep(300);//using long time due to low performance of website
+
     }
     @When("press on wishList Button on any product from Home Page")
             public void press_on_wishList_Button_on_any_product_from_Home_Page(){
@@ -27,8 +22,12 @@ public class D06_addToWishListStepDefinition {
                 wishListProductsPage.addToWishListFiled(Hooks.driver).click();
             }
     @Then("product added to whishList")
-    public void product_added_to_whishList(){
+    public void product_added_to_whishList() throws InterruptedException {
         Assert.assertTrue(wishListProductsPage.checkToWishListFiled(Hooks.driver).getText().contains("The product has been added to your"));
+        Thread.sleep(10000);
+        wishListProductsPage.wishListBTN(Hooks.driver).click();
+        Thread.sleep(300);
+        Assert.assertTrue(wishListProductsPage.checkToWishListFiled2(Hooks.driver).getAttribute("value").equals("1"));
 
     }
 

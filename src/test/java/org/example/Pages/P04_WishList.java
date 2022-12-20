@@ -13,4 +13,13 @@ public class P04_WishList {
         WebElement checkToWishList= driver.findElement(By.className("content"));
         return checkToWishList;
     }
+    public WebElement wishListBTN(WebDriver driver){
+        WebElement wishListBTNLoc= driver.findElement(By.className("wishlist-label"));
+        return wishListBTNLoc;
+    }
+
+    public WebElement checkToWishListFiled2(WebDriver driver){
+        WebElement checkToWishList2= driver.findElement(By.xpath("//td[@class=\"quantity\"]/input"));
+        return checkToWishList2;
+    }
 }
