@@ -30,19 +30,19 @@ public class D12_CreateOrder {
     public void Open_Shopping_cart_and_check_term_of_services() throws InterruptedException {
         shoppingCartPage.addtoShoppingCartBTN(Hooks.driver).click();
         shoppingCartPage.CheckTermsOfService(Hooks.driver).click();
-        Thread.sleep(300);
+//        Thread.sleep(300);
 
     }
     @And("Click checkout Button")
     public void Click_checkout_Button() throws InterruptedException {
         shoppingCartPage.CheckoutBTN(Hooks.driver).click();
-        Thread.sleep(500);
+//        Thread.sleep(100);
     }
     @And("choose address and Click Continue Button")
     public void choose_address_and_Click_ContinueButton() throws InterruptedException {
         createOrderPage=new P12_CreateOrder();
         createOrderPage.addressStepBTN(Hooks.driver).click();
-//        Thread.sleep(500);
+//        Thread.sleep(100);
     }
     @And("Choose shipping method and Click Continue Button")
     public void choose_shippingMethod_and_Click_ContinueButton() throws InterruptedException {
