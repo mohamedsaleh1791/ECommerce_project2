@@ -17,12 +17,16 @@ public class P12_CreateOrder {
         WebElement paymentMethodBTNLoc= driver.findElement(By.cssSelector("button[class=\"button-1 payment-method-next-step-button\"]"));
         return paymentMethodBTNLoc;
     }
+    public WebElement paymentinfoBTN(WebDriver driver){
+        WebElement paymentMethodBTNLoc= driver.findElement(By.cssSelector("button[class=\"button-1 payment-method-next-step-button\"]"));
+        return paymentMethodBTNLoc;
+    }
     public WebElement ConfirmOrderBTN(WebDriver driver){
         WebElement ConfirmOrderBTNLoc= driver.findElement(By.cssSelector("button[class=\"button-1 payment-method-next-step-button\"]"));
         return ConfirmOrderBTNLoc;
     }
     public WebElement checkConfirmOrder(WebDriver driver){
-        WebElement checkConfirmOrderLoc= driver.findElement(By.xpath("//div[@class=\"section order-completed\"]/div[@class=\"title\"]/strong"));
+        WebElement checkConfirmOrderLoc= driver.findElement(By.xpath("//div[@class=\"section order-completed\"]/div[@class=\"title\"]"));
         return checkConfirmOrderLoc;
     }
 }

@@ -8,6 +8,7 @@ import org.example.Pages.P02_Login;
 import org.example.Pages.P09_ShopingCart;
 import org.example.Pages.P12_CreateOrder;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class D12_CreateOrder {
     P02_Login loginPage;
@@ -56,7 +57,7 @@ public class D12_CreateOrder {
     }
     @And("check personal information and Click Continue Button")
     public void check_info_and_Click_ContinueButton() throws InterruptedException {
-        createOrderPage.paymentMethodBTN(Hooks.driver).click();
+        createOrderPage.paymentinfoBTN(Hooks.driver).click();
 //        Thread.sleep(500);
     }
     @And("Click Confirm Button")
@@ -67,6 +68,7 @@ public class D12_CreateOrder {
     @Then("Order is processed successfully")
     public void Order_is_processed_successfully(){
         String x=createOrderPage.checkConfirmOrder(Hooks.driver).getText();
+        System.out.println(x);
         Assert.assertTrue(createOrderPage.checkConfirmOrder(Hooks.driver).getText().contains("Your order has been successfully processed!"));
 
     }
