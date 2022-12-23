@@ -1,85 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="176.745">
-<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="16.859">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="150.578">
+<testcase classname="user should be able to register to the E-commerce site" name="user could register with valid data" time="11.271">
 <system-out><![CDATA[Given user navigate to signup page..........................................passed
 When user enter valid data..................................................passed
 And user click create account button........................................passed
 Then user can create account successfully and go to homepage................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="9.94">
+<testcase classname="user should be able to login to the E-commerce site" name="user could login with valid data" time="8.502">
 <system-out><![CDATA[Given user navigate to login page...........................................passed
 When user enter valid "victoria_victoria@nopCommerce.com" and valid "123456".passed
 And user click login button.................................................passed
 Then user can login successfully and go homepage............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="14.994">
+<testcase classname="User could reset his/her password successfully" name="user could rest password with valid Email" time="8.128">
 <system-out><![CDATA[Given user navigate to home page............................................passed
 When user click forget password button......................................passed
 And user enter valid Email and user click recover Button....................passed
 Then user recieve Instruction mail to rest password.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products" time="18.77">
+<testcase classname="Logged User could search for any product" name="user can search for products" time="10.247">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product by "macbook"...................................passed
 And click search button.....................................................passed
 Then redirect to search page that contain "macbook".........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products 2" time="14.027">
+<testcase classname="Logged User could search for any product" name="user can search for products 2" time="10.585">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product by "laptop"....................................passed
 And click search button.....................................................passed
 Then redirect to search page that contain "laptop"..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could search for any product" name="user can search for products 3" time="19.791">
+<testcase classname="Logged User could search for any product" name="user can search for products 3" time="12.14">
 <system-out><![CDATA[Given user navigate to login page and enter valid username and password.....passed
 When user search for product by "nike"......................................passed
 And click search button.....................................................passed
 Then redirect to search page that contain "nike"............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="9.438">
+<testcase classname="Logged User could switch between currencies US-Euro" name="logged user can switch between currencies" time="10.56">
 <system-out><![CDATA[Given user login with valid username and password...........................passed
 When user switch between currencies.........................................passed
 Then currency of product changed............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could select different Categories" name="user could select different categories and sub categories" time="6.591">
+<testcase classname="Logged user could select different Categories" name="user could select different categories and sub categories" time="7.322">
 <system-out><![CDATA[Given user open home page...................................................passed
 When user hover on category and user click on sub category..................passed
 Then user redirect to the page of selected sub-category.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could choose different tags" name="logged user can choose different tags" time="16.209">
+<testcase classname="Logged user could Filter Color" name="logged user can Filter Color" time="13.741">
+<system-out><![CDATA[Given user login with valid username and valid password Filter Color........passed
+When Type "Shoes" in search Box choose second product.......................passed
+And open product page adn choose any color..................................passed
+Then image of selected color is appear......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could choose different tags" name="logged user can choose different tags" time="11.116">
 <system-out><![CDATA[Given user login with valid username and valid password choose different tags.passed
 When press on any product from Home Page....................................passed
 And choose any tag..........................................................passed
 Then rdirect to page of products that have same choosen tag.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could add different products to  Shopping Cart" name="logged user can add products to  Shopping Cart" time="9.785">
+<testcase classname="Logged user could add different products to  Shopping Cart" name="logged user can add products to  Shopping Cart" time="9.629">
 <system-out><![CDATA[Given user login with valid username and valid password to add to Shopping Cart.passed
 When press on add to cart Button on any product from Home Page..............passed
 Then product added to shopping cart.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could add different products to Wishlist" name="logged user can add products to  whishList" time="20.275">
+<testcase classname="Logged user could add different products to Wishlist" name="logged user can add products to  whishList" time="17.323">
 <system-out><![CDATA[Given user login with valid username and valid password.....................passed
 When press on wishList Button on any product from Home Page.................passed
 Then product added to whishList.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user could add different products to compare List" name="logged user can add products to compare List" time="6.2">
+<testcase classname="Logged user could add different products to compare List" name="logged user can add products to compare List" time="6.215">
 <system-out><![CDATA[Given user navigate to home page URL........................................passed
 When press on to compare List Button on any product from Home Page..........passed
 Then product added to Compare List..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Logged user can create order" name="logged user can create order" time="13.369">
+<testcase classname="Logged user can create order" name="logged user can create order" time="13.363">
 <system-out><![CDATA[Given user login with valid username and valid password and product add to Shopping Cart.passed
 When Open Shopping cart and  check Term of Services.........................passed
 And Click checkout Button...................................................passed

@@ -8,7 +8,13 @@ import org.example.Pages.P02_Login;
 import org.example.Pages.P09_ShopingCart;
 import org.example.Pages.P12_CreateOrder;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class D12_CreateOrder {
     P02_Login loginPage;
@@ -53,20 +59,34 @@ public class D12_CreateOrder {
     @And("Choose payment method and Click Continue Button")
     public void choose_paymentMethod_and_Click_ContinueButton() throws InterruptedException {
         createOrderPage.paymentMethodBTN(Hooks.driver).click();
-        Thread.sleep(500);
+        Hooks.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
     }
     @And("check personal information and Click Continue Button")
     public void check_info_and_Click_ContinueButton() throws InterruptedException {
-        createOrderPage.paymentinfoBTN(Hooks.driver).click();
+        WebElement element = createOrderPage.paymentInfoBTN(Hooks.driver);
+        Hooks.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+        Actions builder = new Actions(Hooks.driver);
+        builder.moveToElement(element).click().perform();
+//        createOrderPage.paymentinfoBTN(Hooks.driver).click();
 //        Thread.sleep(500);
     }
     @And("Click Confirm Button")
     public void Confirm_Button() throws InterruptedException {
-        createOrderPage.paymentMethodBTN(Hooks.driver).click();
+        WebDriverWait wait = new WebDriverWait(Hooks.driver,Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(createOrderPage.confirmOrderBTN(Hooks.driver)));
+//        Hooks.driver.findElement(createOrderPage.confirmOrderBTN()).click();
+
+        WebElement element = Hooks.driver.findElement(createOrderPage.confirmOrderBTN(Hooks.driver));
+        Actions builder = new Actions(Hooks.driver);
+        builder.moveToElement(element).click().perform();
+
+//        createOrderPage.confirmOrderBTN(Hooks.driver).click();
 //        Thread.sleep(500);
+
     }
     @Then("Order is processed successfully")
     public void Order_is_processed_successfully(){
+        Hooks.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         String x=createOrderPage.checkConfirmOrder(Hooks.driver).getText();
         System.out.println(x);
         Assert.assertTrue(createOrderPage.checkConfirmOrder(Hooks.driver).getText().contains("Your order has been successfully processed!"));
