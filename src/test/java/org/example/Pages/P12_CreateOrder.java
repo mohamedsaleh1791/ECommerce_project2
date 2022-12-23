@@ -18,7 +18,7 @@ public class P12_CreateOrder {
         return paymentMethodBTNLoc;
     }
     public WebElement paymentInfoBTN(WebDriver driver){
-        WebElement paymentInfoBTNLoc= driver.findElement(By.cssSelector("button[class=\"button-1 payment-info-next-step-button\"]"));
+        WebElement paymentInfoBTNLoc= driver.findElement(By.cssSelector("#payment-info-buttons-container > button"));
         return paymentInfoBTNLoc;
     }
     public By confirmOrderBTN(WebDriver driver){

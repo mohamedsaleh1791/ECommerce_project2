@@ -8,6 +8,8 @@ import org.example.Pages.P02_Login;
 import org.example.Pages.P09_ShopingCart;
 import org.example.Pages.P12_CreateOrder;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -65,10 +67,11 @@ public class D12_CreateOrder {
     public void check_info_and_Click_ContinueButton() throws InterruptedException {
         WebElement element = createOrderPage.paymentInfoBTN(Hooks.driver);
         Hooks.driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
-        Actions builder = new Actions(Hooks.driver);
-        builder.moveToElement(element).click().perform();
-//        createOrderPage.paymentinfoBTN(Hooks.driver).click();
-//        Thread.sleep(500);
+//        Actions builder = new Actions(Hooks.driver);
+//        builder.moveToElement(element).click().perform();
+        JavascriptExecutor executor = (JavascriptExecutor) Hooks.driver;
+        executor.executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
     }
     @And("Click Confirm Button")
     public void Confirm_Button() throws InterruptedException {
